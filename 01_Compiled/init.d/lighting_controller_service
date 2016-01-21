@@ -1,0 +1,16 @@
+#!/bin/sh /etc/rc.common
+
+START=66
+
+SERVICE_PID_FILE=/var/run/lighting_controller_service.pid
+
+#CONFIGFILE="/var/etc/lighting_controller_service.conf"
+
+
+start() {
+    service_start /usr/bin/lighting_controller_service
+}
+
+stop() {
+    service_stop /usr/bin/lighting_controller_service
+}
